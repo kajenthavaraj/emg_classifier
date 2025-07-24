@@ -1,10 +1,10 @@
-# EMG Classifier for Rock Paper Scissors
+# EMG Classifier for Hand Gesures 
 
-A machine learning project that uses Electromyography (EMG) signals to classify hand gestures for Rock Paper Scissors game.
+A machine learning project that uses Electromyography (EMG) signals to classify hand gestures.
 
 ## 📋 Project Overview
 
-This project demonstrates how to use EMG signals from forearm muscles to predict hand gestures. The classifier can distinguish between different finger positions that correspond to Rock, Paper, and Scissors hand gestures.
+This project demonstrates how to use EMG signals from forearm muscles to predict hand gestures. The classifier can distinguish between different finger positions.
 
 ## 🗂️ Project Structure
 
