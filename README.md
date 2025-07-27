@@ -104,6 +104,22 @@ The notebook includes:
    emg_values = scaler.fit_transform(emg_values)
    ```
 
+5. **Prepare labels for training**:
+   ```python
+   # Convert labels to one-hot encoding for categorical crossentropy
+   y_train_onehot = tf.keras.utils.to_categorical(y_train, num_classes=4)
+   y_test_onehot = tf.keras.utils.to_categorical(y_test, num_classes=4)
+   ```
+
+6. **Train the model**:
+   ```python
+   model.compile(
+       optimizer='sgd',  # Stochastic Gradient Descent
+       loss='categorical_crossentropy',  # For one-hot encoded labels
+       metrics=['accuracy']
+   )
+   ```
+
 ## 🧠 Machine Learning Pipeline
 
 The project implements a complete ML pipeline:
@@ -111,9 +127,10 @@ The project implements a complete ML pipeline:
 1. **Data Loading**: Read EMG data from CSV files
 2. **Data Preprocessing**: Clean and standardize the data
 3. **Feature Engineering**: Extract relevant features from EMG signals
-4. **Model Training**: Train classification models
-5. **Evaluation**: Assess model performance with metrics
-6. **Prediction**: Use trained model for new EMG signal classification
+4. **Label Encoding**: Convert class labels to one-hot encoding for categorical crossentropy loss
+5. **Model Training**: Train neural network using Stochastic Gradient Descent (SGD) optimizer
+6. **Evaluation**: Assess model performance with metrics
+7. **Prediction**: Use trained model for new EMG signal classification
 
 ## 📈 Expected Results
 
@@ -129,9 +146,12 @@ The project implements a complete ML pipeline:
 - **Feature Extraction**: Time-domain and frequency-domain features
 
 ### Machine Learning Models
-- Traditional ML: Random Forest, SVM, etc.
-- Deep Learning: Neural networks with TensorFlow/Keras
-- Ensemble Methods: Combining multiple models
+- **Neural Network Architecture**: Feedforward neural network with 2 hidden layers (1024 neurons each)
+- **Optimizer**: Stochastic Gradient Descent (SGD) for stable training
+- **Loss Function**: Categorical Crossentropy with one-hot encoded labels
+- **Regularization**: Dropout layers (20%) to prevent overfitting
+- **Activation**: ReLU for hidden layers, Softmax for output layer
+- **Alternative Models**: Traditional ML (Random Forest, SVM) and ensemble methods
 
 ## 🤝 Contributing
 
@@ -157,4 +177,4 @@ For questions or contributions, please open an issue in the repository.
 
 ---
 
-**Note**: This is a research/educational project. For medical applications, consult with healthcare professionals and ensure proper validation protocols. 
+**Note**: This is a research/educational project.
