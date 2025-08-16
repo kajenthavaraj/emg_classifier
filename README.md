@@ -31,7 +31,7 @@ emg_classifier/
 
 1. **Clone or download this repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/kajenthavaraj/emg_classifier
    cd emg_classifier
    ```
 
@@ -153,13 +153,6 @@ The project implements a complete ML pipeline:
 - **Activation**: ReLU for hidden layers, Softmax for output layer
 - **Alternative Models**: Traditional ML (Random Forest, SVM) and ensemble methods
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 📝 License
 
@@ -170,10 +163,6 @@ This project is open source and available under the [MIT License](LICENSE).
 - EMG data collection and preprocessing
 - Machine learning model development
 - Signal processing techniques
-
-## 📞 Contact
-
-For questions or contributions, please open an issue in the repository.
 
 ---
 
